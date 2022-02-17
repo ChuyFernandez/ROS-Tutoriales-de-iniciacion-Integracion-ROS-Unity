@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ros: 
+    # Colocar nombre de la imagen
+    image: chuy7/ros:tutorial-integracion-ros-unity 
+    ports: 
+      - 10000:10000
+      - 5005:5005
+    volumes:
+      - ./ros_packages/unity_robotics_demo:/catkin_ws/src/unity_robotics_demo
+      - ./ros_packages/unity_robotics_demo_msgs:/catkin_ws/src/unity_robotics_demo_msgs
+      - ./ros_packages/ros_tcp_endpoint:/catkin_ws/src/ros_tcp_endpoint
